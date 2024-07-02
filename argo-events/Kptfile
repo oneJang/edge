@@ -1,0 +1,22 @@
+apiVersion: kpt.dev/v1
+kind: Kptfile
+metadata: # kpt-merge: /argo-events
+  name: argo-events
+  annotations:
+    config.kubernetes.io/local-config: "true"
+    internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|argo-events'
+upstream:
+  type: git
+  git:
+    repo: https://github.com/oneJang/management.git
+    directory: argo-events
+    ref: main
+upstreamLock:
+  type: git
+  git:
+    repo: https://github.com/oneJang/management.git
+    directory: argo-events
+    ref: main
+    commit: cd168ab0cbaa110fb4f67ab2be5e2dc1f4f10d99
+info:
+  description: sample description

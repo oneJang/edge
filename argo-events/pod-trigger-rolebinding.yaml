@@ -1,0 +1,15 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata: # kpt-merge: replay/k8s-trigger-rolebinding
+  name: k8s-trigger-rolebinding
+  namespace: replay
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'rbac.authorization.k8s.io|RoleBinding|replay|k8s-trigger-rolebinding'
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: Role
+  name: k8s-trigger-role
+subjects:
+- kind: ServiceAccount
+  name: k8s-resource-sa
+  namespace: replay

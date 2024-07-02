@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ServiceAccount
+metadata: # kpt-merge: replay/k8s-resource-sa
+  name: k8s-resource-sa
+  namespace: replay
+  annotations:
+    internal.kpt.dev/upstream-identifier: '|ServiceAccount|replay|k8s-resource-sa'
