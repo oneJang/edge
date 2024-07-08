@@ -17,6 +17,6 @@ upstreamLock:
     repo: https://github.com/oneJang/management.git
     directory: argo-events
     ref: main
-    commit: 96f928a122c5575fcecb7a02a505b07b08521c1b
+    commit: 4c29dee1c6cd8290e3479d7710cd01a7dbb9d685
 info:
   description: sample description
