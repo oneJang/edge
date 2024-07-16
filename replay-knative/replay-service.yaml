@@ -1,0 +1,17 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata: # kpt-merge: replay/replay-service
+  name: replay-service
+  namespace: replay
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'serving.knative.dev|Service|replay|replay-service'
+spec:
+  template:
+    spec:
+      containers:
+      - image: ghcr.io/knative/helloworld-go:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: TARGET
+          value: "World"

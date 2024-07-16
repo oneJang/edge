@@ -1,0 +1,15 @@
+apiVersion: sources.triggermesh.io/v1alpha1
+kind: WebhookSource
+metadata: # kpt-merge: replay/replay-webhook
+  name: replay-webhook
+  namespace: replay
+  annotations:
+    internal.kpt.dev/upstream-identifier: 'sources.triggermesh.io|WebhookSource|replay|replay-webhook'
+spec:
+  eventType: com.video.replay.requested
+  sink:
+    ref:
+      apiVersion: eventing.knative.dev/v1
+      kind: Broker
+      name: default
+      namespace: default
