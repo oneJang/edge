@@ -1,7 +1,8 @@
 apiVersion: eventing.knative.dev/v1
 kind: Trigger
-metadata: # kpt-merge: /replay-trigger
+metadata: # kpt-merge: default/replay-trigger
   name: replay-trigger
+  namespace: default
   annotations:
     internal.kpt.dev/upstream-identifier: 'eventing.knative.dev|Trigger|default|replay-trigger'
 spec:
