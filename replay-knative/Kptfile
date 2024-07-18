@@ -1,7 +1,8 @@
 apiVersion: kpt.dev/v1
 kind: Kptfile
-metadata: # kpt-merge: /replay-knative
+metadata: # kpt-merge: default/replay-knative
   name: replay-knative
+  namespace: default
   annotations:
     config.kubernetes.io/local-config: "true"
     internal.kpt.dev/upstream-identifier: 'kpt.dev|Kptfile|default|replay-knative'
@@ -17,6 +18,6 @@ upstreamLock:
     repo: https://github.com/oneJang/management.git
     directory: knative/replay-knative
     ref: main
-    commit: e1c9b5c781d37f8b29420d0ac7d666e08b88e163
+    commit: 39cf03cbe337b294e743be38bbafbe2710e02982
 info:
   description: sample description
